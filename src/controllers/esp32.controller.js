@@ -6,7 +6,9 @@ export const esp32Controller = async (req, res) => {
   try {
     alarmaI.estado = estado;
     await alarmaI.save();
-    return res.status(200);
+    return res.status(200).json({
+      msg: 'guardado'
+    });
   } catch (error) {
     console.log(error);
   }

@@ -10,7 +10,7 @@ dotenv.config()
 connectDB();
 
 app.use(express.json())
-app.use('/api/esp32', espRoutes)
+app.use('/api', espRoutes)
 app.use('/', indexRoutes)
 
 app.listen(PORT, () => {
