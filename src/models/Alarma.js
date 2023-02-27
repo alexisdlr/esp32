@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
-
+import moment from 'moment'
 const alarmaSchema = mongoose.Schema({
   fecha: {
-    type: Date,
+    type: String,
     required: true,
-    default: Date.now()
+    default: moment().calendar()
   },
   estado: {
     type: String,
